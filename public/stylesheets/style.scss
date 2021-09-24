@@ -1,5 +1,6 @@
 header {
-    height: 20px;
+    height: 30px;
+    background-color: rgb(168, 169, 221);
     margin-bottom: 30px;
     .f-container {
         display: flex;
@@ -7,6 +8,11 @@ header {
 
         .f-item {
             display: flex;
+
+            #myIcon {
+                height: 30px;
+            }
+
         }
         
     }

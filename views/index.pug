@@ -7,13 +7,13 @@ block content
         .f-item
           span.material-icons menu
           //- パスはpublic下からでよい
-          img(src="/images/myIcon.PNG", alt="myIcon")
+          img#myIcon(src="/images/myIcon.PNG", alt="myIcon")
         .f-item
           form(action="/hello" method="get")
-            label(for="explore") 検索
-            input#explore(type="text" name="explore")
-          input(type="submit" value="虫メガネのアイコン")
-
+            div
+              label(for="explore") 検索
+              input#explore(type="text" name="explore")
+            input(type="image" src="/images/searchIcon_1x.png" alt="searchIcon")
         nav.f-item
           -for (let i = 1; i <=3; i++)
               li item #{i}

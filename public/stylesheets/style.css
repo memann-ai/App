@@ -1,5 +1,6 @@
 header {
-  height: 20px;
+  height: 30px;
+  background-color: #a8a9dd;
   margin-bottom: 30px;
 }
 
@@ -16,6 +17,10 @@ header .f-container .f-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+header .f-container .f-item #myIcon {
+  height: 30px;
 }
 
 header h1 {
