@@ -1,1 +1,42 @@
+header {
+  height: 20px;
+  margin-bottom: 30px;
+}
 
+header .f-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .f-container .f-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header h1 {
+  color: greenyellow;
+  margin: 5px;
+}
+
+header nav {
+  display: inline-block;
+}
+
+header nav li {
+  list-style: none;
+  font-size: 5px;
+}
+
+.main {
+  margin-top: 10px;
+}
+
+.main h1 {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */
