@@ -19,6 +19,14 @@ header .f-container .f-item {
   display: flex;
 }
 
+header .f-container .f-item #open {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 header .f-container .f-item #myIcon {
   height: 30px;
 }
@@ -35,6 +43,34 @@ header nav {
 header nav li {
   list-style: none;
   font-size: 5px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s;
+  list-style: none;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .main {

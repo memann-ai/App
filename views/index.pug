@@ -5,7 +5,7 @@ block content
     .container
       .f-container
         .f-item
-          span.material-icons menu
+          span.material-icons#open menu
           //- パスはpublic下からでよい
           img#myIcon(src="/images/myIcon.PNG", alt="myIcon")
         .f-item
@@ -18,8 +18,16 @@ block content
           -for (let i = 1; i <=3; i++)
               li item #{i}
 
+  .overlay 
+    span.material-icons#close close
+    div 
+        a(href="/hello")  Menu1
+        a(href="#")  Menu2
+        a(href="#")  Menu3
+
   .main
     .container 
       h1= title
       p #{content}
 
+  script(src="/javascripts/hamburger.js") 

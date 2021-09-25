@@ -9,6 +9,11 @@ header {
         .f-item {
             display: flex;
 
+            #open {
+                cursor: pointer;
+                user-select: none;
+            }
+
             #myIcon {
                 height: 30px;
             }
@@ -31,6 +36,31 @@ header {
         }
     }
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    list-style: none;
+    
+    &.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    #close {
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
 
 .main {
     margin-top: 10px;
