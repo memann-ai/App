@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start:nodemon": "nodemon ./bin/www",
+    "start:sync": "browser-sync start --config bs-config.js",
+    "start": "run-s start:nodemon start:sync"
   },
   "dependencies": {
+    "browser-sync": "^2.27.5",
     "chalk": "^4.1.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -13,5 +16,8 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "yarn-run-all": "^3.1.1"
   }
 }

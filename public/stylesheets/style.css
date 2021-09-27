@@ -20,6 +20,8 @@ header .f-container .f-item {
 }
 
 header .f-container .f-item #open {
+  position: relative;
+  top: 2px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -27,8 +29,29 @@ header .f-container .f-item #open {
           user-select: none;
 }
 
+header .f-container .f-item #open:hover {
+  opacity: .5;
+}
+
 header .f-container .f-item #myIcon {
   height: 30px;
+}
+
+header .f-container .f-item form {
+  position: relative;
+  top: 3px;
+}
+
+header .f-container .f-item form .input {
+  float: left;
+}
+
+header .f-container .f-item form #searchIcon {
+  float: right;
+}
+
+header .f-container .f-item form #searchIcon:hover {
+  opacity: .5;
 }
 
 header h1 {
@@ -41,36 +64,66 @@ header nav {
 }
 
 header nav li {
+  margin-right: 10px;
+  font-size: 15px;
+  line-height: 30px;
   list-style: none;
-  font-size: 5px;
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
   left: 0;
+  width: 15%;
   background: rgba(255, 255, 255, 0.95);
   text-align: center;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: opacity .6s;
-  transition: opacity .6s;
-  list-style: none;
-}
-
-.overlay.show {
-  opacity: 1;
   pointer-events: auto;
-}
-
-.overlay #close {
-  cursor: pointer;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+  list-style: none;
+  z-index: 2;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.overlay.hidden {
+  -webkit-transform: translate(-300px, 0);
+          transform: translate(-300px, 0);
+  pointer-events: none;
+}
+
+.overlay #close {
+  cursor: pointer;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+}
+
+.overlay a {
+  display: block;
+  z-index: 2;
+}
+
+#mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+#mask.hidden {
+  display: none;
 }
 
 .main {
